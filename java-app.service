@@ -1,0 +1,13 @@
+[Unit]
+Description=My Java Service
+After=network.target
+
+[Service]
+Type=simple
+User=java-runner
+ExecStart=/usr/bin/sleep 1000
+Restart=on-failure
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target
